@@ -12,4 +12,6 @@ chmod -R 777 $FOLDER
 
 php /var/www/html/scheduler.php >> $FOLDER/scheduler.log &
 
+rubbish command
+
 apache2-foreground
