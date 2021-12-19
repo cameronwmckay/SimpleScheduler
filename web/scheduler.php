@@ -30,7 +30,8 @@
 							$event_time = evaluate_event_time($e,$sun);
 							if ( $event_time==$current_time ) :
 								$extra = get_event_extra_info($e);
-								$value=$extra[1] ;
+								$value=$extra[1];
+								echo "\n\nTurning ON\n";
 								call_HA($s->entity_id,"on",$value);
 							endif;								
 						endforeach;
@@ -41,6 +42,7 @@
 						foreach($elist as  $e) :
 							$event_time = evaluate_event_time($e,$sun);
 							if ( $event_time==$current_time ) call_HA($s->entity_id,"off");					
+							echo "\n\nTurning OFF\n";
 						endforeach;
 					endif;
 					
